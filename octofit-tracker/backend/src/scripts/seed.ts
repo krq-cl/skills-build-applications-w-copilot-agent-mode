@@ -180,7 +180,7 @@ async function seedDatabase() {
         recommendedForGoal: 'Increase weekly activity consistency',
         exercises: ['5 minute easy row', '20 minute steady row', '5 minute mobility flow'],
       },
-    ];
+    ]; 
 
     const [createdTeams, createdUsers, createdActivities, createdLeaderboard, createdWorkouts] = await Promise.all([
       Team.insertMany(teams),
