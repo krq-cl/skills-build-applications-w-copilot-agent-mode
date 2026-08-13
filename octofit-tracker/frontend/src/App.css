@@ -182,3 +182,244 @@
     border-right-color: var(--border);
   }
 }
+
+#root {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  border: 0;
+  display: block;
+  text-align: left;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: #f5f8f7;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #d9e1e7;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #173b4d;
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand img {
+  width: 2.25rem;
+  height: 2.25rem;
+  object-fit: contain;
+}
+
+.app-nav {
+  display: flex;
+  gap: 0.2rem;
+  overflow-x: auto;
+}
+
+.app-nav a {
+  padding: 0.45rem 0.65rem;
+  color: #4c5f69;
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.app-nav a.active {
+  color: #0e6c72;
+  box-shadow: inset 0 -2px #0e6c72;
+}
+
+.app-content {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.content-panel {
+  min-height: 420px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.2rem;
+  color: #0e6c72;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.section-heading h1,
+.team-card h2,
+.workout-card h2 {
+  margin: 0;
+  color: #173b4d;
+  font-family: Georgia, serif;
+}
+
+.section-heading h1 {
+  font-size: 2.4rem;
+}
+
+.record-count,
+.difficulty {
+  padding: 0.3rem 0.55rem;
+  color: #305563;
+  background: #e8f3f1;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.data-table {
+  --bs-table-bg: transparent;
+  margin-bottom: 0;
+  color: #29434f;
+}
+
+.data-table thead th {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  color: #56707a;
+  border-bottom-color: #cfdbe0;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.data-table td span,
+.leaderboard-list li div span {
+  color: #6b7d84;
+  font-size: 0.86rem;
+}
+
+.team-card,
+.workout-card {
+  height: 100%;
+  padding: 1.3rem;
+  border: 1px solid #d6e0e3;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.team-card dl {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.4rem 0 0;
+}
+
+.team-card dt {
+  color: #6b7d84;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.team-card dd {
+  margin: 0.1rem 0 0;
+  color: #29434f;
+}
+
+.leaderboard-list {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.leaderboard-list li {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d6e0e3;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.leaderboard-list li div {
+  display: grid;
+}
+
+.rank {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #e16b47;
+  font-weight: 700;
+}
+
+.leaderboard-list b {
+  color: #0e6c72;
+}
+
+.workout-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: #0e6c72;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.workout-card p {
+  min-height: 3rem;
+  margin: 0.6rem 0 0;
+  color: #5d7079;
+}
+
+.workout-card ul {
+  min-height: 6.5rem;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  color: #405960;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  .app-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .app-nav {
+    width: 100%;
+  }
+
+  .app-content {
+    padding: 1.6rem 1rem 3rem;
+  }
+
+  .section-heading h1 {
+    font-size: 2rem;
+  }
+}
